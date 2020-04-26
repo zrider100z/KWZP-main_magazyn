@@ -148,7 +148,7 @@ ID_Rozmiar_Polki int
 )
 CREATE TABLE Dostawcy_Zaopatrzenie (
 ID_Dostawcy  int IDENTITY(1,1) PRIMARY KEY,
-Nazwa char(20),
+Nazwa char(40),
 Telefon_1 int, 
 Telefon_2 int, 
 Email char(40)
@@ -205,7 +205,7 @@ Koszt_Staly int,
 )
 
 CREATE TABLE Oferta (
-ID_Oferta char(10) PRIMARY KEY,
+ID_Oferta int IDENTITY(1,1) PRIMARY KEY,
 ID_Element int 
 	FOREIGN KEY REFERENCES 
 	Elementy(ID_Element),	
@@ -260,7 +260,7 @@ Ilosc_Paczek int
 
 CREATE TABLE Dostawcy_Oferta (
 ID_Dostawcy_Oferta int IDENTITY(1,1) PRIMARY KEY,
-ID_Oferta char(10) 
+ID_Oferta int
 	FOREIGN KEY REFERENCES  
 	Oferta(ID_Oferta), 
 ID_Zamowienia int 
@@ -284,7 +284,7 @@ ID_Zamowienia_Zawartosc int IDENTITY(1,1) PRIMARY KEY,
 ID_Zamowienia int 
 	FOREIGN KEY REFERENCES
 	Zamowienia(ID_Zamowienia),
-ID_Oferta char(10)
+ID_Oferta int
 	FOREIGN KEY REFERENCES 
 	Oferta(ID_Oferta),
 Ilosc_Zamawiana int)
