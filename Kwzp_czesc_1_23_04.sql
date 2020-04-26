@@ -187,6 +187,9 @@ ID_Cecha int
 	FOREIGN KEY REFERENCES
 	Elementy_Cechy_Slownik(ID_Cecha),
 Wartosc_Cechy_Liczbowa real,
+ID_Jednostka int
+	FOREIGN KEY REFERENCES
+	Elementy_Jednostki(ID_Jednostka),
 Wartosc_Cechy_Slowna char(30)
 )
 
