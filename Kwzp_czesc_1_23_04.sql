@@ -151,14 +151,14 @@ ID_Dostawcy  int IDENTITY(1,1) PRIMARY KEY,
 Nazwa char(20),
 Telefon_1 int, 
 Telefon_2 int, 
-Email char(20)
+Email char(40)
 )
 CREATE TABLE Kurierzy (
 ID_Kurier int IDENTITY(1,1) PRIMARY KEY,
 Nazwa char(20),
 Telefon_1 int, 
 Telefon_2 int, 
-Email char(20)
+Email char(40)
 )
 CREATE TABLE Miejsca (
 ID_Miejsca int IDENTITY(1,1) PRIMARY KEY,
@@ -212,7 +212,7 @@ ID_Dostawcy int
 	Dostawcy_Zaopatrzenie(ID_Dostawcy),
 Cena_Jedn money,
 Cena money,
-Data_Oferty char(10),
+Data_Oferty date,
 Ilosc_Minimalna int,
 Ilosc_Maksymalna int,
 Ilosc_W_Opakowaniu_Zbiorczym int
@@ -236,8 +236,8 @@ ID_Dostawy int IDENTITY(1,1) PRIMARY KEY,
 ID_Zamowienia int 
 	FOREIGN KEY REFERENCES
 	Zamowienia(ID_Zamowienia),
-Data_Dostawy_Planowana char(10),
-Data_Dostawy_Rzeczywista char(10),
+Data_Dostawy_Planowana date,
+Data_Dostawy_Rzeczywista date,
 )
 
 CREATE TABLE Zawartosc (
