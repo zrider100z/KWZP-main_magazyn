@@ -218,7 +218,8 @@ Cena money,
 Data_Oferty date,
 Ilosc_Minimalna int,
 Ilosc_Maksymalna int,
-Ilosc_W_Opakowaniu_Zbiorczym int
+Ilosc_W_Opakowaniu_Zbiorczym int,
+Deklarowany_czas_dostawy int,
 )
 
 ---------------------------------------------------------WYMAGA TABELI ZAMOWIEN I PRACOWNIKOW---------------------------------------------------------
