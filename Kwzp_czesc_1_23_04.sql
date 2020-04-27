@@ -214,7 +214,6 @@ ID_Dostawcy int
 	FOREIGN KEY REFERENCES  
 	Dostawcy_Zaopatrzenie(ID_Dostawcy),
 Cena_Jedn money,
-Cena money,
 Data_Oferty date,
 Ilosc_Minimalna int,
 Ilosc_Maksymalna int,
